@@ -20,6 +20,7 @@ export const signUp = async (email: string, password: string, username: string) 
     password,
     options: {
       data: { username },
+      emailRedirectTo: `${window.location.origin}/dashboard`,
     },
   });
   if (error) throw new Error(error.message);
